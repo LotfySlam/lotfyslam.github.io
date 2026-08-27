@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lotfy Nagy | Customer Experience & Operations Professional</title>
+    <title>Lotfy Nagy | Senior Customer Experience & Operations Specialist</title>
 
-    <meta name="description" content="Lotfy Nagy — Customer Experience & Operations Professional specializing in Customer Experience, Customer Operations, Customer Success, Leadership, and Process Improvement.">
+    <meta name="description" content="Lotfy Nagy is a Senior Customer Experience & Operations Specialist with 8+ years of experience in Customer Experience, Customer Operations, Customer Success, Escalation Management, Team Leadership and Process Improvement.">
+
+    <meta name="keywords" content="Lotfy Nagy, Customer Experience, Customer Operations, Customer Success, Customer Service, CX, Operations, Team Leadership, Complaint Management, Process Improvement">
+
+    <meta name="author" content="Lotfy Nagy">
+
+    <meta property="og:title" content="Lotfy Nagy | Customer Experience & Operations">
+    <meta property="og:description" content="Senior Customer Experience & Operations Specialist focused on improving customer experiences, operational performance and service quality.">
+    <meta property="og:type" content="website">
 
     <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -21,9 +35,14 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b1120;
+            background: #080d19;
             color: #e5e7eb;
             line-height: 1.7;
+        }
+
+        body::selection {
+            background: #38bdf8;
+            color: #082f49;
         }
 
         a {
@@ -31,33 +50,47 @@
             text-decoration: none;
         }
 
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
         .container {
             width: 90%;
-            max-width: 1150px;
+            max-width: 1180px;
             margin: auto;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(11, 17, 32, 0.95);
-            border-bottom: 1px solid #1e293b;
-            backdrop-filter: blur(10px);
+
+            background: rgba(8, 13, 25, 0.92);
+
+            border-bottom: 1px solid #172033;
+
+            backdrop-filter: blur(14px);
         }
 
         .nav-container {
-            min-height: 72px;
+            min-height: 74px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo {
-            font-size: 22px;
-            font-weight: 700;
+            font-size: 23px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+
             color: #ffffff;
         }
 
@@ -68,357 +101,787 @@
         .nav-links {
             display: flex;
             gap: 28px;
+
             list-style: none;
         }
 
         .nav-links a {
-            color: #cbd5e1;
+            color: #94a3b8;
             font-size: 14px;
-            transition: 0.3s;
+            font-weight: 500;
+
+            transition: 0.3s ease;
         }
 
         .nav-links a:hover {
             color: #38bdf8;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 88vh;
+            min-height: calc(100vh - 74px);
+
             display: flex;
             align-items: center;
+
             position: relative;
             overflow: hidden;
         }
 
         .hero::before {
             content: "";
+
             position: absolute;
-            width: 450px;
-            height: 450px;
+
+            width: 600px;
+            height: 600px;
+
+            right: -180px;
+            top: 30px;
+
             background: #0369a1;
-            opacity: 0.12;
-            filter: blur(100px);
+
+            opacity: 0.10;
+
+            filter: blur(120px);
+
             border-radius: 50%;
-            right: -100px;
-            top: 50px;
         }
 
-        .hero-content {
-            max-width: 850px;
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            left: -180px;
+            bottom: -100px;
+
+            background: #0284c7;
+
+            opacity: 0.06;
+
+            filter: blur(100px);
+
+            border-radius: 50%;
+        }
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns: 1.15fr 0.85fr;
+
+            gap: 70px;
+
+            align-items: center;
+
             position: relative;
             z-index: 2;
         }
 
         .eyebrow {
             color: #38bdf8;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+
             font-size: 13px;
-            margin-bottom: 18px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: clamp(48px, 8vw, 82px);
-            line-height: 1.05;
+            font-size: clamp(52px, 7vw, 86px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
             color: #ffffff;
-            margin-bottom: 20px;
+
+            margin-bottom: 25px;
         }
 
         .hero h1 span {
             color: #38bdf8;
         }
 
-        .hero h2 {
-            font-size: clamp(22px, 3vw, 34px);
+        .hero-title {
+            font-size: clamp(23px, 3vw, 34px);
+
+            line-height: 1.25;
+
             font-weight: 500;
+
             color: #cbd5e1;
-            margin-bottom: 25px;
+
+            margin-bottom: 22px;
         }
 
-        .hero p {
-            max-width: 720px;
+        .hero-subtitle {
             font-size: 18px;
+
+            max-width: 700px;
+
             color: #94a3b8;
+
+            margin-bottom: 32px;
+        }
+
+        .hero-keywords {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+
             margin-bottom: 35px;
+        }
+
+        .keyword {
+            padding: 7px 12px;
+
+            border: 1px solid #26354b;
+
+            border-radius: 30px;
+
+            color: #cbd5e1;
+
+            background: rgba(17, 24, 39, 0.55);
+
+            font-size: 12px;
         }
 
         .buttons {
             display: flex;
-            gap: 15px;
+
+            gap: 14px;
+
             flex-wrap: wrap;
         }
 
         .btn {
-            display: inline-block;
-            padding: 13px 23px;
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 22px;
+
             border-radius: 8px;
-            font-weight: 600;
-            transition: 0.3s;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
             border: 1px solid #334155;
+
+            transition: 0.3s ease;
         }
 
         .btn-primary {
             background: #38bdf8;
-            color: #082f49;
+
             border-color: #38bdf8;
+
+            color: #082f49;
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+
             background: #7dd3fc;
         }
 
         .btn-secondary {
             color: #e2e8f0;
+
+            background: transparent;
         }
 
         .btn-secondary:hover {
+            transform: translateY(-3px);
+
             border-color: #38bdf8;
+
             color: #38bdf8;
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           PROFILE IMAGE
+        ========================= */
+
+        .hero-photo-wrapper {
+            position: relative;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .hero-photo-wrapper::before {
+            content: "";
+
+            position: absolute;
+
+            width: 430px;
+            height: 430px;
+
+            border-radius: 50%;
+
+            background: #0ea5e9;
+
+            opacity: 0.08;
+
+            filter: blur(60px);
+        }
+
+        .photo-card {
+            position: relative;
+
+            width: min(390px, 85vw);
+
+            border-radius: 28px;
+
+            padding: 10px;
+
+            background: linear-gradient(
+                145deg,
+                #26354b,
+                #101827
+            );
+
+            border: 1px solid #334155;
+
+            box-shadow:
+                0 35px 80px rgba(0, 0, 0, 0.45),
+                0 0 50px rgba(56, 189, 248, 0.06);
+
+            transform: rotate(1deg);
+
+            transition: 0.5s ease;
+        }
+
+        .photo-card:hover {
+            transform: rotate(0deg) translateY(-6px);
+        }
+
+        .profile-photo {
+            width: 100%;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            border-radius: 20px;
+        }
+
+        .photo-badge {
+            position: absolute;
+
+            left: -22px;
+            bottom: 28px;
+
+            padding: 12px 17px;
+
+            border-radius: 10px;
+
+            background: #111827;
+
+            border: 1px solid #26354b;
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+
+            font-size: 12px;
+
+            color: #cbd5e1;
+        }
+
+        .photo-badge strong {
+            display: block;
+
+            color: #38bdf8;
+
+            font-size: 15px;
+
+            margin-bottom: 2px;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
-            padding: 100px 0;
-            border-top: 1px solid #172033;
+            padding: 105px 0;
+
+            border-top: 1px solid #141e30;
         }
 
         .section-label {
             color: #38bdf8;
+
             text-transform: uppercase;
+
             letter-spacing: 2px;
-            font-size: 13px;
-            font-weight: 700;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
             margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 42px;
+            font-size: clamp(34px, 5vw, 48px);
+
+            line-height: 1.1;
+
+            letter-spacing: -1px;
+
             color: #ffffff;
-            margin-bottom: 18px;
+
+            margin-bottom: 20px;
         }
 
         .section-intro {
-            max-width: 760px;
+            max-width: 780px;
+
             color: #94a3b8;
-            margin-bottom: 45px;
+
+            font-size: 16px;
+
+            margin-bottom: 48px;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
+
+            grid-template-columns: 1.25fr 0.75fr;
+
+            gap: 65px;
+
             align-items: start;
         }
 
         .about-text p {
             color: #cbd5e1;
-            margin-bottom: 18px;
+
             font-size: 17px;
-        }
 
-        .focus-card {
-            padding: 30px;
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 14px;
-        }
-
-        .focus-card h3 {
-            color: #ffffff;
             margin-bottom: 20px;
         }
 
-        .focus-card ul {
+        .about-highlight {
+            padding: 30px;
+
+            border-radius: 16px;
+
+            background: #0e1625;
+
+            border: 1px solid #1e293b;
+        }
+
+        .about-highlight h3 {
+            color: #ffffff;
+
+            font-size: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .about-highlight ul {
             list-style: none;
         }
 
-        .focus-card li {
-            padding: 10px 0;
+        .about-highlight li {
+            padding: 11px 0;
+
             color: #cbd5e1;
+
             border-bottom: 1px solid #1e293b;
+
+            font-size: 14px;
         }
 
-        .focus-card li:last-child {
+        .about-highlight li:last-child {
             border-bottom: none;
         }
 
-        /* IMPACT */
+        .about-highlight li::before {
+            content: "→";
+
+            color: #38bdf8;
+
+            margin-right: 10px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           IMPACT
+        ========================= */
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 16px;
         }
 
         .stat {
-            background: #111827;
+            min-height: 190px;
+
+            padding: 28px;
+
+            border-radius: 15px;
+
+            background: #0e1625;
+
             border: 1px solid #1e293b;
-            border-radius: 14px;
-            padding: 30px;
-            transition: 0.3s;
+
+            transition: 0.3s ease;
         }
 
         .stat:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+
             border-color: #38bdf8;
+
+            background: #111c2e;
         }
 
         .stat-number {
-            font-size: 38px;
+            font-size: 36px;
+
+            line-height: 1.1;
+
             font-weight: 800;
+
             color: #38bdf8;
-            margin-bottom: 5px;
+
+            margin-bottom: 9px;
         }
 
         .stat-title {
             color: #ffffff;
-            font-weight: 600;
-            margin-bottom: 6px;
+
+            font-weight: 700;
+
+            font-size: 15px;
+
+            margin-bottom: 7px;
         }
 
         .stat-text {
             color: #94a3b8;
-            font-size: 14px;
+
+            font-size: 13px;
         }
 
-        /* EXPERTISE */
+
+        /* =========================
+           EXPERTISE
+        ========================= */
 
         .skills-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 18px;
         }
 
         .skill {
-            padding: 25px;
-            background: #111827;
+            padding: 28px;
+
+            min-height: 180px;
+
+            border-radius: 14px;
+
+            background: #0e1625;
+
             border: 1px solid #1e293b;
-            border-radius: 12px;
+
+            transition: 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+
+            border-color: #334155;
+        }
+
+        .skill-number {
+            color: #38bdf8;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 15px;
         }
 
         .skill h3 {
             color: #ffffff;
-            margin-bottom: 8px;
+
+            font-size: 19px;
+
+            margin-bottom: 9px;
         }
 
         .skill p {
             color: #94a3b8;
+
             font-size: 14px;
         }
 
-        /* EXPERIENCE */
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
 
         .timeline {
-            max-width: 900px;
+            max-width: 920px;
+
             border-left: 2px solid #1e293b;
-            padding-left: 35px;
+
+            padding-left: 38px;
         }
 
         .job {
             position: relative;
-            margin-bottom: 45px;
+
+            margin-bottom: 55px;
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
         }
 
         .job::before {
             content: "";
+
             position: absolute;
-            width: 12px;
-            height: 12px;
+
+            width: 13px;
+            height: 13px;
+
             background: #38bdf8;
+
             border-radius: 50%;
-            left: -42px;
-            top: 8px;
-            box-shadow: 0 0 0 5px #0b1120;
+
+            left: -46px;
+
+            top: 6px;
+
+            box-shadow:
+                0 0 0 5px #080d19,
+                0 0 20px rgba(56, 189, 248, 0.35);
         }
 
         .job-date {
             color: #38bdf8;
-            font-size: 13px;
-            font-weight: 600;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
             margin-bottom: 5px;
         }
 
         .job h3 {
             color: #ffffff;
-            font-size: 22px;
+
+            font-size: 23px;
+
+            margin-bottom: 3px;
         }
 
         .job-company {
             color: #cbd5e1;
+
+            font-weight: 600;
+
             margin-bottom: 10px;
         }
 
         .job p {
             color: #94a3b8;
+
+            font-size: 15px;
+
+            max-width: 800px;
         }
 
-        /* LEARNING */
+
+        /* =========================
+           LEARNING
+        ========================= */
 
         .learning-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 20px;
         }
 
         .learning-card {
-            padding: 28px;
-            background: #111827;
+            padding: 30px;
+
+            border-radius: 15px;
+
+            background: #0e1625;
+
             border: 1px solid #1e293b;
-            border-radius: 14px;
         }
 
         .learning-card h3 {
             color: #ffffff;
+
+            font-size: 19px;
+
             margin-bottom: 8px;
         }
 
         .learning-card p {
             color: #94a3b8;
-            font-size: 15px;
+
+            font-size: 14px;
         }
 
-        /* INSIGHTS */
+        .learning-status {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            font-size: 11px;
+
+            color: #38bdf8;
+
+            border: 1px solid #26354b;
+
+            border-radius: 30px;
+
+            padding: 5px 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           INSIGHTS
+        ========================= */
 
         .insights-box {
-            padding: 45px;
-            border: 1px solid #1e293b;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #111827, #0f172a);
+            padding: 48px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111c2e,
+                    #0b1220
+                );
+
+            border: 1px solid #26354b;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .insights-box::after {
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            right: -100px;
+            top: -100px;
+
+            background: #0ea5e9;
+
+            opacity: 0.07;
+
+            border-radius: 50%;
+
+            filter: blur(60px);
         }
 
         .insights-box h3 {
-            font-size: 28px;
             color: #ffffff;
+
+            font-size: 28px;
+
             margin-bottom: 12px;
         }
 
         .insights-box p {
             color: #94a3b8;
-            max-width: 750px;
+
+            max-width: 760px;
         }
 
         .topics {
             display: flex;
-            gap: 10px;
+
             flex-wrap: wrap;
+
+            gap: 9px;
+
             margin-top: 25px;
         }
 
         .topic {
+            padding: 7px 12px;
+
             border: 1px solid #334155;
-            padding: 7px 13px;
+
             border-radius: 30px;
-            font-size: 13px;
+
+            font-size: 12px;
+
             color: #cbd5e1;
         }
 
-        /* CONTACT */
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             text-align: center;
@@ -429,568 +892,1324 @@
             margin-right: auto;
         }
 
-        /* FOOTER */
+        .contact-links {
+            margin-top: 25px;
 
-        footer {
-            border-top: 1px solid #1e293b;
-            padding: 30px 0;
-            text-align: center;
-            color: #64748b;
-            font-size: 14px;
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
         }
 
-        /* MOBILE */
+        .contact-link {
+            color: #94a3b8;
 
-        @media (max-width: 800px) {
+            font-size: 14px;
+
+            transition: 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #172033;
+
+            padding: 30px 0;
+
+            text-align: center;
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .hero-content {
+                order: 1;
+            }
+
+            .hero-photo-wrapper {
+                order: 2;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-keywords,
+            .buttons {
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 650px) {
 
             .nav-links {
                 display: none;
             }
 
             .hero {
-                min-height: 80vh;
+                padding: 70px 0;
             }
 
-            .about-grid,
-            .stats-grid,
-            .skills-grid,
-            .learning-grid {
-                grid-template-columns: 1fr;
+            .hero h1 {
+                font-size: 55px;
+
+                letter-spacing: -2px;
+            }
+
+            .hero-title {
+                font-size: 23px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .photo-card {
+                width: min(330px, 88vw);
+            }
+
+            .photo-badge {
+                left: -8px;
             }
 
             section {
                 padding: 75px 0;
             }
 
-            .section-title {
-                font-size: 34px;
+            .stats-grid,
+            .skills-grid,
+            .learning-grid {
+                grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 54px;
+            .stat {
+                min-height: auto;
             }
 
-            .hero p {
-                font-size: 16px;
+            .timeline {
+                padding-left: 25px;
+            }
+
+            .job::before {
+                left: -33px;
+            }
+
+            .insights-box {
+                padding: 30px;
+            }
+
+            .insights-box h3 {
+                font-size: 23px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
+
         <div class="container nav-container">
-            <a href="#home" class="logo">Lotfy<span>.</span></a>
+
+            <a href="#home" class="logo">
+                Lotfy<span>.</span>
+            </a>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#learning">Learning</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#impact">Impact</a>
+                </li>
+
+                <li>
+                    <a href="#expertise">Expertise</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#learning">Learning</a>
+                </li>
+
+                <li>
+                    <a href="#insights">Insights</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
+
         </div>
+
     </nav>
 
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <header class="hero" id="home">
-        <div class="container">
+
+        <div class="container hero-grid">
+
+
             <div class="hero-content">
 
                 <div class="eyebrow">
                     Customer Experience • Operations • Leadership
                 </div>
 
+
                 <h1>
                     Lotfy <span>Nagy</span>
                 </h1>
 
-                <h2>
-                    Customer Experience & Operations Professional
+
+                <h2 class="hero-title">
+                    Senior Customer Experience & Operations Specialist
                 </h2>
 
-                <p>
-                    I help organizations improve customer experiences,
-                    strengthen operations, manage complex escalations,
-                    and build high-performing customer service teams.
+
+                <p class="hero-subtitle">
+
+                    Improving customer experiences, operational performance,
+                    and service quality through people, processes, and data.
+
                 </p>
 
+
+                <div class="hero-keywords">
+
+                    <span class="keyword">
+                        Customer Experience
+                    </span>
+
+                    <span class="keyword">
+                        Customer Operations
+                    </span>
+
+                    <span class="keyword">
+                        Customer Success
+                    </span>
+
+                    <span class="keyword">
+                        Escalation Management
+                    </span>
+
+                    <span class="keyword">
+                        Team Leadership
+                    </span>
+
+                </div>
+
+
                 <div class="buttons">
-                    <a href="#experience" class="btn btn-primary">
+
+                    <a
+                        href="#experience"
+                        class="btn btn-primary">
+
                         Explore My Experience
+
                     </a>
 
-                    <a href="#contact" class="btn btn-secondary">
-                        Let's Connect
+
+                    <a
+                        href="https://www.linkedin.com/in/lotfy-slam/"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-secondary">
+
+                        Connect on LinkedIn
+
                     </a>
+
                 </div>
 
             </div>
+
+
+
+            <div class="hero-photo-wrapper">
+
+                <div class="photo-card">
+
+                    <img
+                        src="profile.png"
+                        alt="Lotfy Nagy - Customer Experience and Operations Professional"
+                        class="profile-photo">
+
+                    <div class="photo-badge">
+
+                        <strong>8+ Years</strong>
+
+                        Customer Experience & Operations
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </div>
+
     </header>
 
 
-    <!-- ABOUT -->
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
     <section id="about">
+
         <div class="container">
 
-            <div class="section-label">About Me</div>
+            <div class="section-label">
+                About Me
+            </div>
+
 
             <h2 class="section-title">
-                Customer-focused. Operations-minded.
+                Customer-focused. Operations-minded. Results-driven.
             </h2>
 
+
             <div class="about-grid">
+
 
                 <div class="about-text">
 
                     <p>
+
                         I am a Customer Experience and Operations professional
                         with 8+ years of experience across customer support,
-                        customer operations, escalations, and team leadership.
+                        customer operations, escalations, service quality,
+                        and team leadership.
+
                     </p>
 
+
                     <p>
+
                         My experience combines hands-on customer interaction
                         with operational improvement, KPI management,
-                        complaint resolution, CRM workflows, and coaching.
+                        complaint resolution, CRM workflows, coaching,
+                        and service performance management.
+
                     </p>
 
+
                     <p>
-                        I am particularly interested in building customer-centric
-                        operations where better processes, empowered teams,
-                        and meaningful customer insights work together to
-                        improve business performance.
+
+                        I focus on understanding the customer journey,
+                        identifying operational gaps, improving processes,
+                        and enabling teams to deliver more consistent,
+                        efficient, and customer-centric experiences.
+
+                    </p>
+
+
+                    <p>
+
+                        My professional direction is centered around
+                        Customer Experience, Customer Excellence,
+                        Customer Operations, Customer Success,
+                        and leadership roles where customer insights
+                        can translate into measurable business improvement.
+
                     </p>
 
                 </div>
 
-                <div class="focus-card">
 
-                    <h3>Professional Focus</h3>
+
+                <div class="about-highlight">
+
+                    <h3>
+                        Professional Focus
+                    </h3>
+
 
                     <ul>
-                        <li>Customer Experience</li>
-                        <li>Customer Operations</li>
-                        <li>Customer Success</li>
-                        <li>Complaint & Escalation Management</li>
-                        <li>Team Leadership</li>
-                        <li>Process Improvement</li>
-                        <li>KPI Management</li>
-                        <li>CRM Operations</li>
+
+                        <li>
+                            Customer Experience Strategy
+                        </li>
+
+                        <li>
+                            Customer Operations
+                        </li>
+
+                        <li>
+                            Customer Success
+                        </li>
+
+                        <li>
+                            Complaint & Escalation Management
+                        </li>
+
+                        <li>
+                            Service Quality & KPIs
+                        </li>
+
+                        <li>
+                            Team Coaching & Leadership
+                        </li>
+
+                        <li>
+                            Process Improvement & SOPs
+                        </li>
+
+                        <li>
+                            CRM & Omnichannel Operations
+                        </li>
+
                     </ul>
 
                 </div>
 
+
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- IMPACT -->
+
+    <!-- =========================
+         IMPACT
+    ========================= -->
 
     <section id="impact">
+
         <div class="container">
 
-            <div class="section-label">Professional Impact</div>
+            <div class="section-label">
+                Professional Impact
+            </div>
+
 
             <h2 class="section-title">
-                Results that matter.
+                Results that tell the story.
             </h2>
 
+
             <p class="section-intro">
-                A snapshot of measurable improvements and operational
-                responsibilities across my customer service career.
+
+                Selected examples of measurable impact and operational
+                responsibility throughout my customer service and
+                operations career.
+
             </p>
+
 
             <div class="stats-grid">
 
+
                 <div class="stat">
-                    <div class="stat-number">8+</div>
-                    <div class="stat-title">Years Experience</div>
+
+                    <div class="stat-number">
+                        8+
+                    </div>
+
+                    <div class="stat-title">
+                        Years Experience
+                    </div>
+
                     <div class="stat-text">
                         Customer Experience, Support & Operations
                     </div>
+
                 </div>
 
+
                 <div class="stat">
-                    <div class="stat-number">94%</div>
-                    <div class="stat-title">FCR</div>
-                    <div class="stat-text">
-                        First Contact Resolution achievement
+
+                    <div class="stat-number">
+                        94%
                     </div>
+
+                    <div class="stat-title">
+                        First Contact Resolution
+                    </div>
+
+                    <div class="stat-text">
+                        Strong FCR performance across customer support operations
+                    </div>
+
                 </div>
 
+
                 <div class="stat">
-                    <div class="stat-number">45 sec</div>
-                    <div class="stat-title">AHT Reduction</div>
+
+                    <div class="stat-number">
+                        45 sec
+                    </div>
+
+                    <div class="stat-title">
+                        AHT Reduction
+                    </div>
+
                     <div class="stat-text">
                         Reduced Average Handling Time
                     </div>
+
                 </div>
 
-                <div class="stat">
-                    <div class="stat-number">3.8 → 4.5</div>
-                    <div class="stat-title">App Rating</div>
-                    <div class="stat-text">
-                        Improved customer app rating
-                    </div>
-                </div>
 
                 <div class="stat">
-                    <div class="stat-number">1,000+</div>
-                    <div class="stat-title">Monthly Requests</div>
-                    <div class="stat-text">
-                        Managed customer requests and operational cases
+
+                    <div class="stat-number">
+                        3.8 → 4.5
                     </div>
+
+                    <div class="stat-title">
+                        App Rating
+                    </div>
+
+                    <div class="stat-text">
+                        Improved customer-facing app rating
+                    </div>
+
                 </div>
 
+
                 <div class="stat">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-title">CSRs Coached</div>
-                    <div class="stat-text">
-                        Supported and coached junior customer service staff
+
+                    <div class="stat-number">
+                        1,000+
                     </div>
+
+                    <div class="stat-title">
+                        Monthly Requests
+                    </div>
+
+                    <div class="stat-text">
+                        Customer requests and operational cases managed
+                    </div>
+
                 </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-number">
+                        200+
+                    </div>
+
+                    <div class="stat-title">
+                        Complex Complaints
+                    </div>
+
+                    <div class="stat-text">
+                        Complex customer complaints handled monthly
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-number">
+                        50+
+                    </div>
+
+                    <div class="stat-title">
+                        CSRs Coached
+                    </div>
+
+                    <div class="stat-text">
+                        Junior customer service professionals coached
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-number">
+                        15%
+                    </div>
+
+                    <div class="stat-title">
+                        Team Performance
+                    </div>
+
+                    <div class="stat-text">
+                        Improvement supported through coaching and performance management
+                    </div>
+
+                </div>
+
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- EXPERTISE -->
+
+    <!-- =========================
+         EXPERTISE
+    ========================= -->
 
     <section id="expertise">
+
         <div class="container">
 
-            <div class="section-label">Core Expertise</div>
+            <div class="section-label">
+                Core Expertise
+            </div>
+
 
             <h2 class="section-title">
-                What I bring to the table.
+                Where I create value.
             </h2>
 
+
             <p class="section-intro">
-                A combination of customer-facing expertise, operational thinking,
-                leadership, and continuous improvement.
+
+                A combination of customer-facing expertise, operational
+                thinking, leadership, and continuous improvement.
+
             </p>
+
 
             <div class="skills-grid">
 
-                <div class="skill">
-                    <h3>Customer Experience</h3>
-                    <p>
-                        Designing better customer journeys and improving
-                        the quality of customer interactions.
-                    </p>
-                </div>
 
                 <div class="skill">
-                    <h3>Customer Operations</h3>
+
+                    <div class="skill-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Customer Experience
+                    </h3>
+
                     <p>
-                        Managing workflows, service operations, and
-                        day-to-day customer processes.
+                        Improving customer journeys and service experiences
+                        by connecting customer needs with operational execution.
                     </p>
+
                 </div>
 
-                <div class="skill">
-                    <h3>Customer Success</h3>
-                    <p>
-                        Building relationships and helping customers
-                        achieve better outcomes.
-                    </p>
-                </div>
 
                 <div class="skill">
-                    <h3>Escalation Management</h3>
+
+                    <div class="skill-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Customer Operations
+                    </h3>
+
                     <p>
-                        Handling complex complaints and finding
-                        practical resolution paths.
+                        Managing workflows, service processes, operational
+                        cases, and day-to-day customer operations.
                     </p>
+
                 </div>
 
-                <div class="skill">
-                    <h3>Team Leadership</h3>
-                    <p>
-                        Coaching customer service teams and supporting
-                        performance development.
-                    </p>
-                </div>
 
                 <div class="skill">
-                    <h3>Process Improvement</h3>
+
+                    <div class="skill-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Customer Success
+                    </h3>
+
                     <p>
-                        Identifying operational gaps and developing
-                        practical SOPs and improvements.
+                        Building stronger customer relationships and helping
+                        customers achieve better outcomes.
                     </p>
+
                 </div>
 
-                <div class="skill">
-                    <h3>KPI Management</h3>
-                    <p>
-                        Monitoring service metrics and connecting
-                        performance indicators to customer outcomes.
-                    </p>
-                </div>
 
                 <div class="skill">
-                    <h3>CRM Operations</h3>
+
+                    <div class="skill-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Escalation Management
+                    </h3>
+
                     <p>
-                        Working with CRM systems and structured customer
-                        data to improve service operations.
+                        Resolving complex complaints and escalations while
+                        protecting customer trust and business relationships.
                     </p>
+
                 </div>
 
+
                 <div class="skill">
-                    <h3>Omnichannel Support</h3>
+
+                    <div class="skill-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Team Leadership
+                    </h3>
+
                     <p>
-                        Supporting customers across multiple service
-                        channels including chat and voice.
+                        Coaching teams, supporting performance development,
+                        and creating stronger service delivery habits.
                     </p>
+
                 </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-number">
+                        06
+                    </div>
+
+                    <h3>
+                        Process Improvement
+                    </h3>
+
+                    <p>
+                        Identifying operational gaps and developing practical
+                        SOPs, workflows, and service improvements.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-number">
+                        07
+                    </div>
+
+                    <h3>
+                        KPI Management
+                    </h3>
+
+                    <p>
+                        Using service metrics to identify performance gaps
+                        and improve operational outcomes.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-number">
+                        08
+                    </div>
+
+                    <h3>
+                        CRM Operations
+                    </h3>
+
+                    <p>
+                        Working with CRM workflows and structured customer
+                        data to support efficient service operations.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-number">
+                        09
+                    </div>
+
+                    <h3>
+                        Omnichannel Support
+                    </h3>
+
+                    <p>
+                        Managing customer interactions across chat, voice,
+                        and digital service channels.
+                    </p>
+
+                </div>
+
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- EXPERIENCE -->
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
 
     <section id="experience">
+
         <div class="container">
 
-            <div class="section-label">Career Journey</div>
+            <div class="section-label">
+                Career Journey
+            </div>
+
 
             <h2 class="section-title">
-                My professional journey.
+                From customer support to operations leadership.
             </h2>
 
+
             <p class="section-intro">
-                A career built around customer service, technology,
-                operations, and continuous professional growth.
+
+                A professional journey built around customer service,
+                technology, operations, problem solving, and leadership.
+
             </p>
+
 
             <div class="timeline">
 
-                <div class="job">
-                    <div class="job-date">Current Role</div>
-                    <h3>Customer Operations Team Leader</h3>
-                    <div class="job-company">Waves</div>
-                    <p>
-                        Leading customer operations for a hospitality and
-                        rental platform, with focus on service quality,
-                        escalations, team performance, and operational improvement.
-                    </p>
-                </div>
 
                 <div class="job">
-                    <div class="job-date">Previous Role</div>
-                    <h3>Senior Customer Support SPE</h3>
-                    <div class="job-company">Xceed</div>
+
+                    <div class="job-date">
+                        Current Role
+                    </div>
+
+                    <h3>
+                        Customer Operations Team Leader
+                    </h3>
+
+                    <div class="job-company">
+                        Waves
+                    </div>
+
                     <p>
-                        Managed complex customer cases, escalations,
-                        service quality, and operational support within
-                        a high-volume BPO environment.
+
+                        Leading customer operations for a chalet and yacht
+                        rental platform across Kuwait and GCC markets, with
+                        focus on service quality, escalations, customer
+                        experience, team performance, and operational improvement.
+
                     </p>
+
                 </div>
 
-                <div class="job">
-                    <div class="job-date">Previous Role</div>
-                    <h3>Customer Support Specialist</h3>
-                    <div class="job-company">Xceed</div>
-                    <p>
-                        Delivered customer support and technical assistance
-                        while maintaining service quality and customer satisfaction.
-                    </p>
-                </div>
+
 
                 <div class="job">
-                    <div class="job-date">Previous Role</div>
-                    <h3>Customer Care & Technical Support</h3>
-                    <div class="job-company">Xceed</div>
+
+                    <div class="job-date">
+                        Previous Role
+                    </div>
+
+                    <h3>
+                        Senior Customer Support SPE
+                    </h3>
+
+                    <div class="job-company">
+                        Xceed
+                    </div>
+
                     <p>
-                        Combined customer care with technical troubleshooting
-                        and issue resolution.
+
+                        Managed complex customer cases and escalations within
+                        a high-volume BPO environment, while supporting service
+                        quality, customer satisfaction, operational performance,
+                        and knowledge sharing.
+
                     </p>
+
                 </div>
 
+
+
                 <div class="job">
-                    <div class="job-date">Early Career</div>
-                    <h3>Technical Support Specialist</h3>
-                    <div class="job-company">Alhekma Lab</div>
+
+                    <div class="job-date">
+                        Previous Role
+                    </div>
+
+                    <h3>
+                        Customer Support Specialist
+                    </h3>
+
+                    <div class="job-company">
+                        Xceed
+                    </div>
+
                     <p>
+
+                        Delivered customer support across service channels,
+                        handled customer issues, supported troubleshooting,
+                        and maintained service quality and customer satisfaction.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="job">
+
+                    <div class="job-date">
+                        Previous Role
+                    </div>
+
+                    <h3>
+                        Customer Care & Technical Support
+                    </h3>
+
+                    <div class="job-company">
+                        Xceed
+                    </div>
+
+                    <p>
+
+                        Combined customer care with technical troubleshooting,
+                        issue resolution, and effective customer communication.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="job">
+
+                    <div class="job-date">
+                        Early Career
+                    </div>
+
+                    <h3>
+                        Technical Support Specialist
+                    </h3>
+
+                    <div class="job-company">
+                        Alhekma Lab
+                    </div>
+
+                    <p>
+
                         Provided technical support and developed a strong
-                        foundation in customer problem solving.
+                        foundation in customer problem solving, troubleshooting,
+                        and service communication.
+
                     </p>
+
                 </div>
 
+
+
                 <div class="job">
-                    <div class="job-date">Early Career</div>
-                    <h3>Technical Support Specialist</h3>
-                    <div class="job-company">Ehab Center</div>
+
+                    <div class="job-date">
+                        Early Career
+                    </div>
+
+                    <h3>
+                        Technical Support Specialist
+                    </h3>
+
+                    <div class="job-company">
+                        Ehab Center
+                    </div>
+
                     <p>
+
                         Built early experience in technical support,
-                        troubleshooting, and customer communication.
+                        troubleshooting, customer communication, and
+                        structured problem solving.
+
                     </p>
+
                 </div>
+
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- LEARNING -->
+
+    <!-- =========================
+         LEARNING
+    ========================= -->
 
     <section id="learning">
+
         <div class="container">
 
-            <div class="section-label">Continuous Learning</div>
+            <div class="section-label">
+                Continuous Learning
+            </div>
+
 
             <h2 class="section-title">
-                Always improving.
+                Building the next level of my expertise.
             </h2>
 
+
             <p class="section-intro">
-                Continuous learning is an important part of my transition
-                toward advanced Customer Experience and leadership roles.
+
+                Continuous learning is an important part of my professional
+                development toward advanced Customer Experience, Customer
+                Excellence, Operations, and leadership roles.
+
             </p>
+
 
             <div class="learning-grid">
 
-                <div class="learning-card">
-                    <h3>Customer Experience Leadership</h3>
-                    <p>
-                        Developing stronger capabilities in CX strategy,
-                        leadership, customer-centric thinking, and goal setting.
-                    </p>
-                </div>
 
                 <div class="learning-card">
-                    <h3>Leading a Customer Service Team</h3>
+
+                    <h3>
+                        Customer Experience Leadership
+                    </h3>
+
                     <p>
-                        Building practical leadership skills around coaching,
-                        team performance, communication, and service management.
+
+                        Developing capabilities in CX strategy, leadership,
+                        customer-centric thinking, vision, goals, and
+                        organizational customer experience.
+
                     </p>
+
+                    <span class="learning-status">
+                        Currently Learning
+                    </span>
+
                 </div>
 
-                <div class="learning-card">
-                    <h3>Customer Service Communication Skills</h3>
-                    <p>
-                        Strengthening communication techniques for effective
-                        customer interactions and professional service delivery.
-                    </p>
-                </div>
+
 
                 <div class="learning-card">
-                    <h3>Professional Development</h3>
+
+                    <h3>
+                        Leading a Customer Service Team
+                    </h3>
+
                     <p>
-                        Continuously developing knowledge in Customer Experience,
-                        Customer Success, Operations, CRM, and Process Improvement.
+
+                        Strengthening practical leadership capabilities around
+                        coaching, team performance, communication, one-on-ones,
+                        and service management.
+
                     </p>
+
+                    <span class="learning-status">
+                        Currently Learning
+                    </span>
+
                 </div>
+
+
+
+                <div class="learning-card">
+
+                    <h3>
+                        Customer Service Communication Skills
+                    </h3>
+
+                    <p>
+
+                        Developing stronger communication techniques for
+                        effective customer interactions, service recovery,
+                        and professional communication.
+
+                    </p>
+
+                    <span class="learning-status">
+                        Professional Development
+                    </span>
+
+                </div>
+
+
+
+                <div class="learning-card">
+
+                    <h3>
+                        CX & Operations Development
+                    </h3>
+
+                    <p>
+
+                        Continuously expanding knowledge across Customer
+                        Experience, Customer Success, Operations, CRM,
+                        Process Improvement, and KPI management.
+
+                    </p>
+
+                    <span class="learning-status">
+                        Ongoing
+                    </span>
+
+                </div>
+
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- INSIGHTS -->
+
+    <!-- =========================
+         INSIGHTS
+    ========================= -->
 
     <section id="insights">
+
         <div class="container">
 
-            <div class="section-label">CX Insights</div>
+            <div class="section-label">
+                CX Insights
+            </div>
+
 
             <h2 class="section-title">
-                Ideas, lessons & perspectives.
+                Sharing what I learn.
             </h2>
+
 
             <div class="insights-box">
 
                 <h3>
-                    Building a Personal Brand in Customer Experience
+                    Customer Experience, Operations & Leadership
                 </h3>
 
+
                 <p>
-                    This space will become a collection of practical insights
-                    about Customer Experience, Customer Service Leadership,
-                    Complaint Management, Customer Success, Operations,
-                    and Process Improvement.
+
+                    I am building a collection of practical insights,
+                    lessons, and perspectives around Customer Experience,
+                    Customer Service Leadership, Complaint Management,
+                    Customer Success, Operations, KPIs, and Process Improvement.
+
+                    The goal is simple: turn real operational experience
+                    into useful knowledge that can help customer-focused
+                    teams perform better.
+
                 </p>
 
+
                 <div class="topics">
-                    <span class="topic">Customer Experience</span>
-                    <span class="topic">Customer Service</span>
-                    <span class="topic">Customer Success</span>
-                    <span class="topic">Leadership</span>
-                    <span class="topic">Complaint Handling</span>
-                    <span class="topic">FCR</span>
-                    <span class="topic">AHT</span>
-                    <span class="topic">Process Improvement</span>
+
+                    <span class="topic">
+                        Customer Experience
+                    </span>
+
+                    <span class="topic">
+                        Customer Service
+                    </span>
+
+                    <span class="topic">
+                        Customer Success
+                    </span>
+
+                    <span class="topic">
+                        Customer Operations
+                    </span>
+
+                    <span class="topic">
+                        Leadership
+                    </span>
+
+                    <span class="topic">
+                        Complaint Handling
+                    </span>
+
+                    <span class="topic">
+                        FCR
+                    </span>
+
+                    <span class="topic">
+                        AHT
+                    </span>
+
+                    <span class="topic">
+                        Process Improvement
+                    </span>
+
                 </div>
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- CONTACT -->
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
     <section id="contact" class="contact">
+
         <div class="container">
 
-            <div class="section-label">Let's Connect</div>
+            <div class="section-label">
+                Let's Connect
+            </div>
+
 
             <h2 class="section-title">
                 Let's build better customer experiences.
             </h2>
 
+
             <p class="section-intro">
-                Open to opportunities and professional conversations
-                around Customer Experience, Customer Success,
-                Customer Operations, and leadership.
+
+                Open to professional opportunities and conversations around
+                Customer Experience, Customer Success, Customer Operations,
+                Service Excellence, and leadership.
+
             </p>
+
 
             <div class="buttons" style="justify-content:center;">
 
                 <a
-                    href="https://www.linkedin.com/"
+                    href="https://www.linkedin.com/in/lotfy-slam/"
                     target="_blank"
+                    rel="noopener"
                     class="btn btn-primary">
+
                     Connect on LinkedIn
+
                 </a>
 
+
                 <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:lotfy.salm1@outlook.com"
                     class="btn btn-secondary">
+
                     Email Me
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-links">
+
+                <a
+                    href="mailto:lotfy.salm1@outlook.com"
+                    class="contact-link">
+
+                    lotfy.salm1@outlook.com
+
+                </a>
+
+                <span class="contact-link">
+                    •
+                </span>
+
+                <a
+                    href="https://www.linkedin.com/in/lotfy-slam/"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-link">
+
+                    linkedin.com/in/lotfy-slam
+
                 </a>
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
+
         <div class="container">
-            © 2026 Lotfy Nagy. Customer Experience & Operations Professional.
+
+            © 2026 Lotfy Nagy.
+            Senior Customer Experience & Operations Specialist.
+
         </div>
+
     </footer>
+
 
 </body>
 </html>
